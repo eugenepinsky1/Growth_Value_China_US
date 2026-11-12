@@ -25,13 +25,27 @@ Additional data in `revision_data/`:
 
 ```
 python rev_a_dividends.py      # total returns: U.S. distributions, China yield scenarios
-python rev_b_subperiods.py     # anatomy of the sub-period variation (Table 13, Figure 6)
-python rev_c2_longus.py        # U.S. 1928-2026, rolling 111-month windows, weak-market episodes (Tables 14-15, Figure 7)
+python rev_b_subperiods.py     # anatomy of the sub-period variation (Table 14, Figure 6)
+python rev_c2_longus.py        # U.S. 1928-2026, rolling 111-month windows, weak-market episodes (Tables 15-16, Figure 7)
 python rev_c_longus.py         # 1971-2021 daily snapshot (daily/weekly remark only)
-python rev_d_costs.py          # itemized cost model (Table 17)
-python rev_e_oos.py            # split-sample, walk-forward and long-history training (Table 18)
-python rev_f2_instruments.py   # ETFs vs. book-to-market indexes, 2016-2025 (Table 16)
+python rev_d_costs.py          # itemized cost model (Table 18)
+python rev_e_oos.py            # split-sample, walk-forward and long-history training (Table 19)
+python rev_f2_instruments.py   # ETFs vs. book-to-market indexes, 2016-2025 (Table 17)
 python rev_tables.py <outdir>  # LaTeX tables of the revision
 python rev_figs.py <outdir>    # Figure6.png, Figure7.png
 ```
 The scripts expect `SPY_D.csv` and `SSE_VG.csv` one level up (or `DATA_DIR`), as for the original scripts.
+
+## Minor revision (round 2): data-snooping-robust tests
+
+Requires the `arch` package (version 9.0.0; `pip install arch`).
+
+```
+python rev_g_spa.py [reps]          # White Reality Check, Hansen SPA and Romano-Wolf StepM over the
+                                    # 24 reported specifications per market (default 10,000 replications;
+                                    # about 5 minutes); writes rev_g.pkl
+python rev_g_table.py [outfile]     # rows of Table 8 from rev_g.pkl
+```
+Seed 20261111; stationary bootstrap with mean block lengths of 5, 21 and 63 trading days. Table numbers
+in this README refer to the round-2 manuscript (the new Table 8 shifted later tables by one).
+
