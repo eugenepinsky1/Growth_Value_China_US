@@ -10,11 +10,11 @@ This file accompanies the paper *Momentum-Driven Growth–Value Style Rotation* 
 
 ## How the tool was used
 
-We developed the Python scripts in `replication_code/` in three interactive sessions with Claude, not from separate prompts written to generate code. In each session we gave the tool the manuscript, the reviewer reports (during the revision) and the data files in this repository, and made high-level requests. The tool then wrote and ran the scripts and corrected them in further iterations. We reviewed the code, its output and the text.
+We worked with Claude in three interactive sessions. The Python scripts in `replication_code/` were developed in sessions 2 and 3, not from separate prompts written to generate code. In each session we gave the tool the manuscript, the reviewer reports (during the revision) and the data files in this repository, and made high-level requests. The tool then wrote and ran the scripts and corrected them in further iterations. We reviewed the code, its output and the text.
 
 This is a summary of our instructions, not their verbatim text:
 
-1. **Manuscript preparation (September 2026).** Prepare the manuscript in the MDPI format.
+1. **Manuscript preparation (September 2026).** Review the manuscript and prepare it for submission: expand the literature review (with references), revise the title and abstract, separate the Introduction and Literature Review, and add a Limitations section. No analysis code was written in this session.
 2. **Before submission (October 2026).** Review the manuscript and the analysis code, and correct any errors. Extend the empirical analysis with additional tests, tables, robustness checks and references, using only the data in this repository.
 3. **Revision (November 2026).** Revise the manuscript in response to the reviewer reports, including any additional analyses, tables, figures and references needed to address the reviewers' comments.
 
@@ -30,11 +30,11 @@ The AI tool proposed and implemented additional analyses. The authors reviewed, 
 
 ## Screenshots of the chat sessions
 
-The folder `AI_screenshots/` contains screenshots of the three chat sessions in which the scripts and analyses were developed. For each session, the screenshots show the opening instructions and representative exchanges in which code was written, run and corrected. Personal contact details and material unrelated to this paper have been masked.
+The folder `AI_screenshots/` contains screenshots of the two chat sessions in which the scripts and analyses were developed (sessions 2 and 3). For each session, the screenshots show the opening instructions, representative exchanges in which code was written, run and corrected, and examples of the authors' follow-up (S2_05: author corrections before submission; S3_04: the authors asking which additional data to obtain for the revision). Session 1 involved only text and references, not code, so it is described above but not shown. Session 3 took place in a chat that began with work on an unrelated paper; its screenshots start at the request for this paper. Personal contact details and material unrelated to this paper have been masked.
 
 | Session | Date | Purpose | Files |
 |---|---|---|---|
-| 1 | 21 September 2026 | Preparing the manuscript in the MDPI format | `AI_screenshots/S1_*.png` |
+| 1 | 21 September 2026 | Manuscript text and references (no code) | — |
 | 2 | 1 October 2026 | Reviewing and extending the analysis before submission | `AI_screenshots/S2_*.png` |
 | 3 | November 2026 | Revision in response to the reviewer reports | `AI_screenshots/S3_*.png` |
 
